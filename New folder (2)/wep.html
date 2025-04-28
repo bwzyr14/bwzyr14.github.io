@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سماء نت</title>
+    <link rel="stylesheet" href="./wep.css">
+</head>
+
+<body>
+
+    <main>
+        <form>
+            <h1>مرحبا بكم في سماء نت</h1>
+
+            <input type="text"id="myInput" placeholder="ادخال الكرت">
+
+            <button onclick="checkInput()">تسجيل الدخول</button>
+
+            <h1>
+                <a href="cirt.html">الباقات</a>
+            </h1>
+
+            <div class="card">
+                <h2>للتواصل</h2>
+                <p>📞 هاتف: 712181006</p>
+                <p>📧 بريد: bbawzyr14@gmali.com</p>
+            </div>
+        </form>
+    </main>
+
+    <script>
+       
+        function checkInput() {
+    var input = document.getElementById("myInput").value; // نحصل على القيمة
+    if (input ==="712181006") {
+        alert("القيمة صحيحة ✅");
+    } else {
+        alert("القيمة غير صحيحة ❌");
+    }}
+    </script>
+
+</body>
+</html>
