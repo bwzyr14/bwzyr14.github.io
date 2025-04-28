@@ -1,0 +1,123 @@
+body {
+    background-image: url('backgr.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+form {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+input {
+    height: 40px;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #eeeeee;
+    text-align: center;
+    font-size: large;
+    color: #333;
+}
+
+button {
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #555555;
+    color: #ffffff;
+}
+
+h1 {
+    color: #f0f0f0;
+    font-size: 24px;
+}
+
+h1 a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #8ab6d6;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+h1 a:hover {
+    color: #ffffff;
+}
+
+.card {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    padding: 20px;
+}
+
+.card h2 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #f0f0f0;
+}
+
+.card p {
+    margin: 5px 0;
+    color: #cccccc;
+}
+
+/* ========== التجاوب مع الشاشات الصغيرة ========== */
+@media (max-width: 600px) {
+    form {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    input, button {
+        height: 35px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h1 a {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+}
+
+
