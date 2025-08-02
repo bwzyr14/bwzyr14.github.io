@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Location Test</title>
+</head>
+<body>
+  <h2>📍 تحديد الموقع</h2>
+  <p id="location">جارٍ تحديد الموقع...</p>
+  <script>
+    // 1. نحاول استخدام GPS من الجهاز
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        function(position) {
+          const lat = position.coords.latitude.toFixed(6);
+          const lon = position.coords.longitude.toFixed(6);
+          document.getElementById("location").innerText =
+            `📡 موقع GPS: خط العرض ${lat}، خط الطول ${lon}`;
+        },
+        function(error) {
+          // إذا فشل GPS، نستخدم IP
+          getLocationFromIP();
+        },
+        { timeout: 5000 }
+      );
+    } else {
+      // GPS غير مدعوم
+      getLocationFromIP();
+    }
+
+    // 2. تحديد الموقع عبر IP
+    function getLocationFromIP() {
+      fetch("https://ipapi.co/json/")
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("location").innerText =
+            `🌐 موقع عبر IP: ${data.city}, ${data.region}, ${data.country_name}\nمزود الخدمة: ${data.org}`;
+        })
+        .catch(() => {
+          document.getElementById("location").innerText = "❌ لم نتمكن من تحديد الموقع";
+        });
+    }
+  </script>
+</body>
+</html>
